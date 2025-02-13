@@ -29,8 +29,12 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "projects",
+    title: "Project",
+  },
+  {
+    id: "education",
+    title: "Education",
   },
   {
     id: "contact",
@@ -101,10 +105,6 @@ const technologies = [
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
   },
   {
     name: "docker",
