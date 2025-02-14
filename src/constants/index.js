@@ -15,6 +15,7 @@ import {
   mongodb,
   git,
   figma,
+  bootstrap,
   docker,
   starbucks,
   carrent,
@@ -87,6 +88,11 @@ const technologies = [
     icon: redux,
   },
   {
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  
+  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
@@ -110,6 +116,7 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
+ 
 ];
 
 const experiences = [

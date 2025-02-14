@@ -21,6 +21,7 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import bootstrap from "./tech/bootstrap.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -54,6 +55,7 @@ export {
   tailwind,
   typescript,
   threejs,
+  bootstrap,
   meta,
   shopify,
   starbucks,
