@@ -11,7 +11,7 @@ import yisr from "../assets/educationImg/yisr.jpg";
 const EducationCard = ({ title, school, date, points, index, logo }) => (
   <motion.div
     variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl w-full mb-7 flex flex-row gap-10'
+    className='glass-effect p-10 rounded-3xl w-full mb-7 flex flex-row gap-10'
   >
     <div className='flex-shrink-0'>
       <img 

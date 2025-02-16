@@ -29,11 +29,11 @@
 }
 
 .violet-gradient {
-  background: var(--gradient-start);
+  background: #9e13ea;
   background: linear-gradient(
     -90deg,
-    var(--gradient-start) 0%,
-    var(--gradient-end) 100%
+    #9e13ea 0%,
+    rgba(60, 51, 80, 0) 100%
   );
 }
 
@@ -174,8 +174,7 @@
       2.5em 0em 0 0em rgba(255, 255, 255, 0.2),
       1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
       0em 2.5em 0 0em rgba(255, 255, 255, 0.7), -1.8em 1.8em 0 0em #ffffff,
-      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
-      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2);
   }
   75% {
     box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2),
@@ -199,7 +198,7 @@
 
 /* Add these theme classes */
 :root {
-  --bg-primary: #050816;
+  --bg-primary: #000000;  /* Changed to pure black */
   --bg-secondary: #151030;
   --bg-tertiary: #1d1836;
   --text-primary: #ffffff;
@@ -212,23 +211,37 @@
   --contact-text: #ffffff;
   --navbar-bg: rgba(0, 0, 0, 0.5);
   --canvas-text: #f3f3f3;
+  --black-100: #000000;
+  --black-200: #100d25;
+  --black-300: #151030;
+  --primary: #000000;  /* Changed to pure black */
+  --secondary: #aaa6c3;
+  --tertiary: #151030;
+  --purple: #9e13ea;
+  --dark-bg: #000000;  /* Changed to pure black */
+  --card-bg: rgba(26, 26, 46, 0.9);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --nav-bg: #1A1A2E;
+  --nav-border: #2A2A3E;
+  --nav-hover: #9e13ea;
 }
 
 /* Update your existing styles to use CSS variables */
 .bg-primary {
-  background-color: var(--bg-primary);
+  background-color: var(--dark-bg);
 }
 
 .bg-tertiary {
-  background-color: var(--bg-tertiary);
+  background-color: var(--tertiary);
 }
 
 .text-white {
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .text-secondary {
-  color: var(--text-secondary);
+  color: var(--secondary);
 }
 
 .text-white-100 {
@@ -236,7 +249,7 @@
 }
 
 .bg-black-200 {
-  background-color: var(--card-bg);
+  background-color: var(--black-200);
 }
 
 /* Update box shadows for cards */
@@ -268,4 +281,21 @@
 /* Canvas text styles */
 .canvas-text {
   color: var(--canvas-text);
+}
+
+.bg-black-100 {
+  background-color: var(--black-100);
+}
+
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-effect:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
