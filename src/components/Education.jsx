@@ -65,7 +65,7 @@ const educationData = [
       logo: scjc,
       points: [
         "Completed Intermediate education with focus on Mathematics, Physics, and Chemistry.",
-        "Secured 95% marks in board examinations.",
+        "Secured 93.8% marks in TSBIE.",
         "Participated in various academic competitions and olympiads.",
       ],
     },

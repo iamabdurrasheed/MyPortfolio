@@ -7,6 +7,45 @@ import CanvasLoader from "../Loader";
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
+  useEffect(() => {
+    if (computer.scene) {
+      const screen = computer.scene.children.find(
+        (child) => child.name === "Screen" || child.children?.find((c) => c.name === "Screen")
+      );
+  
+      if (screen) {
+        const screenMesh = screen.material ? screen : screen.children?.find((c) => c.material);
+  
+        if (screenMesh && screenMesh.material && screenMesh.material.map) {
+          const originalTexture = screenMesh.material.map.image;
+  
+          if (originalTexture) {
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+  
+            // Set canvas size to match image
+            canvas.width = originalTexture.width;
+            canvas.height = originalTexture.height;
+  
+            // Flip the image horizontally
+            ctx.translate(canvas.width, 0);
+            ctx.scale(-1, 1);
+            ctx.drawImage(originalTexture, 0, 0);
+  
+            // Apply flipped image to texture
+            const flippedTexture = new THREE.Texture(canvas);
+            flippedTexture.needsUpdate = true;
+  
+            screenMesh.material.map = flippedTexture;
+            screenMesh.material.needsUpdate = true;
+          }
+        }
+      }
+    }
+  }, [computer]);
+  
+  
+  
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
