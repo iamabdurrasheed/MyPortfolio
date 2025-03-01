@@ -18,7 +18,7 @@ import {
   bootstrap,
   docker,
   starbucks,
-  carrent,
+  QuickScribe,
   jobit,
   tripguide,
   threejs,
@@ -167,25 +167,37 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "QuickScribe",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "QuickScribe is a note-taking web application built with Node.js stack that enables users to create, manage, and organize notes with features like search, importance marking, and dark mode, ensuring secure data storage and accessibility.",
     tags: [
       {
-        name: "react",
+        name: "HTML",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "CSS",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "EJS",
+        color: "yellow-text-gradient",
       },
       {
-        name: "tailwind",
-        color: "pink-text-gradient",
+        name: "Node.js",
+        color: "light-green-text-gradient",
       },
+      {
+        name: "Express.js",
+        color: "gray-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      }
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: QuickScribe,
+    source_code_link: "https://github.com/iamabdurrasheed/QuickScribe.git",
   },
   {
     name: "Job IT",
@@ -206,7 +218,7 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/iamabdurrasheed/",
   },
   {
     name: "Trip Guide",
@@ -227,7 +239,7 @@ const projects = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/iamabdurrasheed/",
   },
 ];
 

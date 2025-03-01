@@ -45,10 +45,10 @@ const ProjectCard = ({
 
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <p className='mt-2 text-secondary text-[14px] line-clamp-3 max-h-20 overflow-hidden text-ellipsis whitespace-break-spaces'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className='mt-4 flex flex-wrap gap-2 overflow-hidden max-h-4'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
