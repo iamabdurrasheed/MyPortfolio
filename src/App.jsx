@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Education, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { About, Contact, Education, Hero, Navbar, Tech, Works, StarsCanvas,Experience } from "./components";
 import HoverableNav from "./components/HoverableNav";
 import { ThemeProvider } from "./context/ThemeContext";
 

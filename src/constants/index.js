@@ -172,7 +172,7 @@ const projects = [
       "QuickScribe is a note-taking web application built with Node.js stack that enables users to create, manage, and organize notes with features like search, importance marking, and dark mode, ensuring secure data storage and accessibility.",
     tags: [
       {
-        name: "HTML",
+        name: "EJS",
         color: "orange-text-gradient",
       },
       {
@@ -180,12 +180,8 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "EJS",
-        color: "yellow-text-gradient",
-      },
-      {
         name: "Node.js",
-        color: "light-green-text-gradient",
+        color: "green-text-gradient",
       },
       {
         name: "Express.js",
