@@ -13,46 +13,37 @@ const ProjectCard = ({
   name,
   description,
   tags,
-  image,
   source_code_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className='glass-effect p-5 rounded-2xl sm:w-[360px] w-full'
+        className='glass-effect p-6 rounded-2xl sm:w-[360px] w-full h-[400px] flex flex-col'
       >
-        <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
-          />
-
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
+        <div className='flex justify-between items-start mb-4'>
+          <h3 className='text-white font-bold text-[24px] leading-tight'>{name}</h3>
+          <div
+            onClick={() => window.open(source_code_link, "_blank")}
+            className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-700 transition-colors'
+          >
+            <img
+              src={github}
+              alt='source code'
+              className='w-1/2 h-1/2 object-contain'
+            />
           </div>
         </div>
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px] line-clamp-3 max-h-20 overflow-hidden text-ellipsis whitespace-break-spaces'>{description}</p>
+        <div className='flex-grow'>
+          <p className='text-secondary text-[14px] leading-relaxed'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2 overflow-hidden max-h-4'>
+        <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[12px] ${tag.color} bg-black/20 px-2 py-1 rounded-md`}
             >
               #{tag.name}
             </p>
@@ -76,11 +67,11 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          The following projects showcase my skills and experience through
+          real-world examples of my work. Each project demonstrates my ability to build
+          full-stack applications, work with modern technologies, and solve complex problems.
+          From authentication systems to API development and AI integration, these projects
+          reflect my journey as a software developer.
         </motion.p>
       </div>
 

@@ -54,7 +54,7 @@ const educationData = [
       logo: kmit,
       points: [
         "Currently pursuing B.Tech with specialization in Computer Science Engineering.",
-        "Maintaining a strong academic performance with CGPA of 8.5+.",
+        "Maintaining a strong academic performance with CGPA of 8.67.",
         "Active participation in technical events.",
       ],
     },

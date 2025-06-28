@@ -46,7 +46,10 @@ const About = () => {
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >I'm Mohammed Abdur Rasheed, a Computer Science Engineering student at KMIT, Hyderabad, with a keen interest in software development. Currently learning the MERN stack and Java, I enjoy exploring new technologies and improving my problem-solving skills. While I'm still growing as a developer, I'm eager to build impactful solutions and collaborate with others to learn and innovate in the tech industry.
+      >
+        I'm Mohammed Abdur Rasheed, a motivated and detail-oriented Computer Science student with a strong foundation in software engineering, full-stack development, and data structures & algorithms. Proficient in Java, JavaScript, React.js, and Node.js, with hands-on experience in building full-stack applications and working with databases like MongoDB and SQL. 
+        <br /><br />
+        I'm passionate about solving real-world problems, continuously learning new technologies, and contributing to scalable and impactful projects. With expertise in modern frameworks like React.js, Express.js, and cloud technologies like AWS and Docker, I'm actively seeking internships and full-time Software Engineering roles to collaborate with industry professionals and contribute to innovative projects.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
