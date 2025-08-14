@@ -92,6 +92,19 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  // Show simplified version on mobile
+  if (isMobile) {
+    return (
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="text-center text-white/30">
+          <div className="w-40 h-40 bg-tertiary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <span className="text-6xl">💻</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Canvas
       frameloop='demand'

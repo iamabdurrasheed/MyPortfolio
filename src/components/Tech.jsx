@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { BallCanvas } from "./canvas";
@@ -6,6 +6,38 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { styles } from "../styles";
 import { textVariant, fadeIn } from "../utils/motion";
+
+const TechIcon = ({ technology, index }) => {
+  const [use3D, setUse3D] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Disable 3D on smaller screens or slower devices
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) {
+      setUse3D(false);
+    }
+  }, []);
+
+  if (!use3D || !isLoaded) {
+    return (
+      <div className='w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center bg-tertiary rounded-full p-4 shadow-card hover:shadow-lg transition-shadow duration-300'>
+        <img 
+          src={technology.icon} 
+          alt={technology.name}
+          className='w-full h-full object-contain'
+          onError={() => setUse3D(false)}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className='w-20 h-20 sm:w-28 sm:h-28'>
+      <BallCanvas icon={technology.icon} />
+    </div>
+  );
+};
 
 const SkillCategory = ({ title, skills, delay }) => (
   <motion.div
@@ -81,10 +113,8 @@ const Tech = () => {
         variants={fadeIn("up", "spring", 0.2, 1)}
         className='mt-8 flex flex-row flex-wrap justify-center gap-6 sm:gap-10'
       >
-        {technologies.map((technology) => (
-          <div className='w-20 h-20 sm:w-28 sm:h-28' key={technology.name}>
-            <BallCanvas icon={technology.icon} />
-          </div>
+        {technologies.map((technology, index) => (
+          <TechIcon key={technology.name} technology={technology} index={index} />
         ))}
       </motion.div>
 
