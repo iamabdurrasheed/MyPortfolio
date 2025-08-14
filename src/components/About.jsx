@@ -52,6 +52,20 @@ const About = () => {
         I'm passionate about solving real-world problems, continuously learning new technologies, and contributing to scalable and impactful projects. With expertise in modern frameworks like React.js, Express.js, and cloud technologies like AWS and Docker, I'm actively seeking internships and full-time Software Engineering roles to collaborate with industry professionals and contribute to innovative projects.
       </motion.p>
 
+      <motion.div
+        variants={fadeIn("", "", 0.2, 1)}
+        className='mt-8'
+      >
+        <a
+          href="/Mohammed Abdur Rasheed Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#9e13ea] hover:bg-[#8711d1] text-white px-8 py-3 rounded-xl text-[16px] font-bold transition-colors duration-300 inline-flex items-center gap-3 shadow-md shadow-primary"
+        >
+          📄 View My Resume
+        </a>
+      </motion.div>
+
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
