@@ -96,11 +96,30 @@ const ComputersCanvas = () => {
   if (isMobile) {
     return (
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="text-center">
-          <div className="w-48 h-32 bg-gradient-to-br from-tertiary to-black-200 rounded-lg flex items-center justify-center mb-4 mx-auto shadow-lg border border-gray-700">
-            <div className="text-6xl">💻</div>
+        <div className="text-center mt-8">
+          {/* Improved coding setup illustration */}
+          <div className="relative w-64 h-40 bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-xl flex items-center justify-center mb-6 mx-auto shadow-2xl border border-gray-600 overflow-hidden">
+            {/* Monitor frame */}
+            <div className="absolute inset-2 bg-gradient-to-br from-blue-900 via-purple-900 to-black rounded-lg border border-gray-500">
+              {/* Screen content */}
+              <div className="w-full h-full flex flex-col justify-center items-center text-green-400 font-mono text-xs p-2">
+                <div className="w-full text-left space-y-1">
+                  <div className="text-blue-400">const developer = {'{'}</div>
+                  <div className="ml-2 text-white">name: <span className="text-yellow-400">"Rasheed"</span>,</div>
+                  <div className="ml-2 text-white">role: <span className="text-yellow-400">"Full Stack"</span>,</div>
+                  <div className="ml-2 text-white">passion: <span className="text-yellow-400">"Innovation"</span></div>
+                  <div className="text-blue-400">{'};'}</div>
+                </div>
+                {/* Cursor blink animation */}
+                <div className="absolute bottom-2 right-2 w-1 h-3 bg-green-400 animate-pulse"></div>
+              </div>
+            </div>
+            {/* Monitor stand */}
+            <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-3 bg-gray-700 rounded-b"></div>
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-2 bg-gray-600 rounded"></div>
           </div>
-          <div className="text-white/50 text-sm">Full Stack Developer</div>
+          <div className="text-white/70 text-base font-semibold">Full Stack Developer</div>
+          <div className="text-[#9e13ea] text-sm mt-1">Building the Future with Code</div>
         </div>
       </div>
     );
