@@ -19,7 +19,7 @@ const ProjectCard = ({
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className='glass-effect p-6 rounded-2xl sm:w-[360px] w-full h-[400px] flex flex-col'
+        className='glass-effect p-5 rounded-2xl w-full sm:w-[360px] h-[400px] flex flex-col'
       >
         <div className='flex justify-between items-start mb-4'>
           <h3 className='text-white font-bold text-[24px] leading-tight'>{name}</h3>
@@ -75,7 +75,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className='mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

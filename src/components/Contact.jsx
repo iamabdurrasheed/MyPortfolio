@@ -75,7 +75,7 @@ const Contact = () => {
       <div className="xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className='flex-[0.75] glass-effect p-8 rounded-2xl'
+          className='flex-[0.75] glass-effect p-6 sm:p-8 rounded-2xl'
         >
           <p className={`${styles.sectionSubText} text-secondary`}>Get in touch</p>
           <h3 className={`${styles.sectionHeadText} text-white`}>Contact.</h3>
@@ -83,7 +83,7 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="mt-12 flex flex-col gap-8"
+            className="mt-8 sm:mt-12 flex flex-col gap-6 sm:gap-8"
           >
             <label className='flex flex-col'>
               <span className='text-white font-medium mb-4'>Your Name</span>
@@ -121,7 +121,7 @@ const Contact = () => {
 
             <button
               type='submit'
-              className='bg-[#9e13ea] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-[#8711d1] transition-colors duration-300'
+              className='bg-[#9e13ea] py-3 px-8 rounded-xl outline-none w-full sm:w-fit text-white font-bold shadow-md shadow-primary hover:bg-[#8711d1] transition-colors duration-300'
             >
               {loading ? "Sending..." : "Send"}
             </button>

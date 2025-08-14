@@ -13,6 +13,27 @@
   color-scheme: dark;
 }
 
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .bg-hero-pattern {
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: scroll !important;
+  }
+  
+  /* Ensure proper text scaling on mobile */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Improve touch targets */
+  button, a, input, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

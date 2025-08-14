@@ -11,16 +11,16 @@ import yisr from "../assets/educationImg/yisr.jpg";
 const EducationCard = ({ title, school, date, points, index, logo }) => (
   <motion.div
     variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-    className='glass-effect p-10 rounded-3xl w-full mb-7 flex flex-row gap-10'
+    className='glass-effect p-6 sm:p-10 rounded-3xl w-full mb-7 flex flex-col sm:flex-row gap-6 sm:gap-10'
   >
-    <div className='flex-shrink-0'>
+    <div className='flex-shrink-0 self-center sm:self-start'>
       <img 
         src={logo} 
         alt={school} 
         className={`${
           school === "Yara International School, Riyadh"
-            ? "w-[140px] h-[75px] rounded-md object-cover object-[center_42%] bg-transparent"
-            : "w-[100px] h-[100px] rounded-full object-contain p-2"
+            ? "w-[120px] sm:w-[140px] h-[65px] sm:h-[75px] rounded-md object-cover object-[center_42%] bg-transparent"
+            : "w-[80px] sm:w-[100px] h-[80px] sm:h-[100px] rounded-full object-contain p-2"
         } ${
           school === "Keshav Memorial Institute Of Technology"
             ? "bg-white"
@@ -28,15 +28,15 @@ const EducationCard = ({ title, school, date, points, index, logo }) => (
         }`}
       />
     </div>
-    <div className='flex-grow'>
-      <h3 className='text-white font-bold text-[24px]'>{school}</h3>
-      <p className='text-white font-semibold text-[16px]'>{title}</p>
-      <p className='mt-2 text-secondary text-[14px]'>{date}</p>
-      <ul className='mt-5 list-disc ml-5 space-y-2'>
+    <div className='flex-grow text-center sm:text-left'>
+      <h3 className='text-white font-bold text-[20px] sm:text-[24px]'>{school}</h3>
+      <p className='text-white font-semibold text-[14px] sm:text-[16px]'>{title}</p>
+      <p className='mt-2 text-secondary text-[12px] sm:text-[14px]'>{date}</p>
+      <ul className='mt-5 list-disc ml-0 sm:ml-5 space-y-2 text-left'>
         {points.map((point, index) => (
           <li
             key={`point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className='text-white-100 text-[12px] sm:text-[14px] pl-1 tracking-wider'
           >
             {point}
           </li>

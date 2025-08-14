@@ -79,10 +79,10 @@ const Tech = () => {
       {/* Interactive Technology Icons */}
       <motion.div 
         variants={fadeIn("up", "spring", 0.2, 1)}
-        className='mt-8 flex flex-row flex-wrap justify-center gap-10'
+        className='mt-8 flex flex-row flex-wrap justify-center gap-6 sm:gap-10'
       >
         {technologies.map((technology) => (
-          <div className='w-28 h-28' key={technology.name}>
+          <div className='w-20 h-20 sm:w-28 sm:h-28' key={technology.name}>
             <BallCanvas icon={technology.icon} />
           </div>
         ))}
@@ -95,7 +95,7 @@ const Tech = () => {
         </h3>
       </motion.div>
 
-      <div className='mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 auto-rows-fr'>
+      <div className='mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6'>
         {skillCategories.map((category, index) => (
           <SkillCategory
             key={category.title}
