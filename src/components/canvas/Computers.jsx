@@ -143,7 +143,7 @@ const ComputersCanvas = () => {
   // Don't render 3D model on mobile - it causes performance issues
   if (isMobile) {
     return (
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-4 pt-16 sm:pt-0">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none px-4 pt-8 sm:pt-0">
         <div className="text-center w-full max-w-md mx-auto">
           {/* Larger Desktop-style coding setup for mobile */}
           <div className="relative w-full h-64 sm:h-72 bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-xl flex items-center justify-center shadow-2xl border border-gray-600 overflow-hidden">
