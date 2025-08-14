@@ -75,14 +75,14 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain cursor-pointer z-50'
+            className='w-[28px] h-[28px] object-contain cursor-pointer z-50 touch-manipulation'
             onClick={() => setToggle(!toggle)}
           />
 
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[200px] z-50 rounded-xl border border-gray-700 shadow-xl`}
+            } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[200px] z-50 rounded-xl border border-gray-700 shadow-xl touch-manipulation`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (

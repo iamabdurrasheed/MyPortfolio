@@ -33,14 +33,15 @@
     min-width: 44px;
   }
   
-  /* Add bottom padding to prevent navigation overlap */
-  body {
-    padding-bottom: 80px;
+  /* Ensure scrolling works properly on mobile */
+  html, body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
   
-  /* Ensure sections have proper spacing on mobile */
-  section {
-    margin-bottom: 2rem;
+  /* Prevent 3D canvas from blocking touches */
+  canvas {
+    pointer-events: none !important;
   }
 }
 

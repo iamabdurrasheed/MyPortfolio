@@ -92,6 +92,20 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  // Don't render 3D model on mobile - it causes performance issues
+  if (isMobile) {
+    return (
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="text-center">
+          <div className="w-48 h-32 bg-gradient-to-br from-tertiary to-black-200 rounded-lg flex items-center justify-center mb-4 mx-auto shadow-lg border border-gray-700">
+            <div className="text-6xl">💻</div>
+          </div>
+          <div className="text-white/50 text-sm">Full Stack Developer</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <Canvas
       frameloop='demand'

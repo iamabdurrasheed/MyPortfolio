@@ -19,13 +19,13 @@ const HoverableNav = () => {
   // On mobile, always show expanded version and position it better
   if (isMobile) {
     return (
-      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-[#1A1A2E]/90 backdrop-blur-sm border border-[#2A2A3E] z-40">
+      <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-[#1A1A2E]/90 backdrop-blur-sm border border-[#2A2A3E] z-30">
         <div className="flex items-center justify-center gap-4">
           <a
             href="https://github.com/iamabdurrasheed"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-[#9e13ea] transition-all duration-300"
+            className="text-white hover:text-[#9e13ea] transition-all duration-300 touch-manipulation"
           >
             <FaGithub className="w-5 h-5" />
           </a>
@@ -33,7 +33,7 @@ const HoverableNav = () => {
             href="https://linkedin.com/in/iamabdurrasheed"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-[#9e13ea] transition-all duration-300"
+            className="text-white hover:text-[#9e13ea] transition-all duration-300 touch-manipulation"
           >
             <FaLinkedin className="w-5 h-5" />
           </a>
@@ -41,7 +41,7 @@ const HoverableNav = () => {
             href="https://www.instagram.com/iamabdurrasheed/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-[#9e13ea] transition-all duration-300"
+            className="text-white hover:text-[#9e13ea] transition-all duration-300 touch-manipulation"
           >
             <FaInstagram className="w-5 h-5" />
           </a>
