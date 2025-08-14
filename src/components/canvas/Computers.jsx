@@ -60,8 +60,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.5 : 0.75}
-        position={isMobile ? [0, -2.5, -1.8] : [0, -3.25, -1.5]}
+        scale={isMobile ? 0.7 : 0.75}
+        position={isMobile ? [0, -2, -1.5] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -91,19 +91,6 @@ const ComputersCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
-
-  // Show simplified version on mobile
-  if (isMobile) {
-    return (
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="text-center text-white/30">
-          <div className="w-40 h-40 bg-tertiary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-            <span className="text-6xl">💻</span>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <Canvas

@@ -8,30 +8,34 @@ import { styles } from "../styles";
 import { textVariant, fadeIn } from "../utils/motion";
 
 const TechIcon = ({ technology, index }) => {
-  const [use3D, setUse3D] = useState(true);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Disable 3D on smaller screens or slower devices
-    const isMobile = window.innerWidth < 768;
-    if (isMobile) {
-      setUse3D(false);
-    }
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  if (!use3D || !isLoaded) {
+  // Mobile: Use static icons for better performance
+  if (isMobile) {
     return (
-      <div className='w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center bg-tertiary rounded-full p-4 shadow-card hover:shadow-lg transition-shadow duration-300'>
+      <div className='w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center bg-tertiary rounded-full p-4 shadow-card hover:shadow-lg transition-all duration-300 hover:scale-110'>
         <img 
           src={technology.icon} 
           alt={technology.name}
           className='w-full h-full object-contain'
-          onError={() => setUse3D(false)}
+          title={technology.name}
         />
       </div>
     );
   }
 
+  // Desktop: Use 3D balls (BallCanvas has its own fallback)
   return (
     <div className='w-20 h-20 sm:w-28 sm:h-28'>
       <BallCanvas icon={technology.icon} />

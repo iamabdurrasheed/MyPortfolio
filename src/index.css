@@ -32,6 +32,16 @@
     min-height: 44px;
     min-width: 44px;
   }
+  
+  /* Add bottom padding to prevent navigation overlap */
+  body {
+    padding-bottom: 80px;
+  }
+  
+  /* Ensure sections have proper spacing on mobile */
+  section {
+    margin-bottom: 2rem;
+  }
 }
 
 .hash-span {

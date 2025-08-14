@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -38,11 +38,27 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  const [error, setError] = useState(false);
+  
+  if (error) {
+    // Fallback when 3D fails
+    return (
+      <div className='w-full h-full flex items-center justify-center bg-tertiary rounded-full p-4 shadow-card hover:shadow-lg transition-all duration-300 hover:scale-110'>
+        <img 
+          src={icon} 
+          alt="tech"
+          className='w-3/4 h-3/4 object-contain'
+        />
+      </div>
+    );
+  }
+
   return (
     <Canvas
       frameloop='demand'
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
+      onError={() => setError(true)}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
