@@ -16,19 +16,20 @@ const HoverableNav = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Same hover behavior for both mobile and desktop, but responsive sizing
+  // Hide completely on mobile, show hover navigation on desktop
+  if (isMobile) {
+    return null;
+  }
+
   return (
     <nav
-      className={`fixed ${isMobile ? 'bottom-6' : 'bottom-8'} left-1/2 transform -translate-x-1/2 ${isMobile ? 'p-3' : 'p-4'} rounded-full 
+      className="fixed bottom-8 left-1/2 transform -translate-x-1/2 p-4 rounded-full 
       transition-all duration-300 ease-in-out z-50
-      ${isHovered 
-        ? `w-auto bg-gradient-to-r from-[#1A1A2E]/95 to-[#2A2A3E]/95 backdrop-blur-md border border-[#9e13ea]/30` 
-        : `${isMobile ? 'w-[50px]' : 'w-[60px]'} bg-[#1A1A2E]/60 backdrop-blur-sm border border-[#2A2A3E]`
-      }`}
+      bg-gradient-to-r from-[#1A1A2E]/95 to-[#2A2A3E]/95 backdrop-blur-md border border-[#9e13ea]/30"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`flex items-center justify-center ${isMobile ? 'gap-4' : 'gap-6'}`}>
+      <div className="flex items-center justify-center gap-6">
         {isHovered && (
           <>
             <a
@@ -37,7 +38,7 @@ const HoverableNav = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-[#9e13ea] transition-all duration-300 transform hover:scale-110"
             >
-              <FaGithub className={`${isMobile ? 'w-5 h-5' : 'w-6 h-6'}`} />
+              <FaGithub className="w-6 h-6" />
             </a>
             <a
               href="https://linkedin.com/in/iamabdurrasheed"
@@ -45,7 +46,7 @@ const HoverableNav = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-[#9e13ea] transition-all duration-300 transform hover:scale-110"
             >
-              <FaLinkedin className={`${isMobile ? 'w-5 h-5' : 'w-6 h-6'}`} />
+              <FaLinkedin className="w-6 h-6" />
             </a>
             <a
               href="https://www.instagram.com/iamabdurrasheed/"
@@ -53,11 +54,11 @@ const HoverableNav = () => {
               rel="noopener noreferrer"
               className="text-white hover:text-[#9e13ea] transition-all duration-300 transform hover:scale-110"
             >
-              <FaInstagram className={`${isMobile ? 'w-5 h-5' : 'w-6 h-6'}`} />
+              <FaInstagram className="w-6 h-6" />
             </a>
           </>
         )}
-        <div className={`text-white ${isMobile ? 'text-lg w-5 h-5' : 'text-xl w-6 h-6'} flex items-center justify-center transition-transform duration-300 hover:scale-110`}>
+        <div className="text-white text-xl w-6 h-6 flex items-center justify-center transition-transform duration-300 hover:scale-110">
           {isHovered ? '🔗' : '☰'}
         </div>
       </div>

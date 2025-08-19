@@ -10,6 +10,8 @@ import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Education from "./Education";
 import HoverableNav from "./HoverableNav";
+import SocialLinks from "./SocialLinks";
+import Footer from "./Footer";
 
 export {
   Hero,
@@ -27,4 +29,6 @@ export {
   ComputersCanvas, 
   StarsCanvas,
   HoverableNav,
+  SocialLinks,
+  Footer,
 };
