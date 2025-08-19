@@ -128,4 +128,3 @@ Contributions are welcome! Feel free to:
 
 ⭐ **Star this repository if you found it helpful!**
 
-**A modern portfolio template for developers**
