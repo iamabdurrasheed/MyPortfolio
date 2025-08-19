@@ -94,9 +94,6 @@ A modern, interactive portfolio website built with cutting-edge te## 🌐 Live D
 npm run build
 ```
 
-## � Live Demo
-
-[View Portfolio](https://yourportfolio.vercel.app)
 
 ## 🎨 Design Highlights
 
